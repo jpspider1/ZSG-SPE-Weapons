@@ -115,8 +115,3 @@ class cfgMagazines
 		displayNameShort = "Wz. 33 (FRAG)";
 	};
 };
-
-class CfgAmmo
-{
-
-};
