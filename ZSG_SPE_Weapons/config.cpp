@@ -7,7 +7,7 @@ class CfgPatches
 		requiredVersion = 0.1;
 		requiredAddons[] = {"WW2_SPE_Assets_c_Weapons_InfantryWeapons_c"};
 		author = "[23PzD] Jpspider";
-		magazines[] = {"ZSG_20Rnd_792x57_S", "ZSG_20Rnd_792x57_SC", "ZSG_20Rnd_792x57_P", "ZSG_8Rnd_9x19_FB_Vis"};
+		magazines[] = {"ZSG_20Rnd_792x57_S", "ZSG_20Rnd_792x57_SC", "ZSG_20Rnd_792x57_P", "ZSG_8Rnd_9x19_FB_Vis", "ZSG_WZ24", "ZSG_WZ33"};
 		ammo[] = {};
 	};
 };
@@ -32,6 +32,21 @@ class CfgWeapons
 		displayName = "FB Wz. 35 Vis";
 		magazines[] = {"ZSG_8Rnd_9x19_FB_Vis"};
 		magazineWell[] = {""};
+	};
+
+	class GrenadeLauncher;
+	class Throw : GrenadeLauncher 
+	{
+		muzzles[] += {"ZSG_WZ24_Muzzle","ZSG_WZ33_Muzzle"};
+		class ThrowMuzzle: GrenadeLauncher{};
+		class ZSG_WZ24_Muzzle: ThrowMuzzle
+		{
+			magazines[] = {"ZSG_WZ24"};
+		};
+		class ZSG_WZ33_Muzzle: ThrowMuzzle
+		{
+			magazines[] = {"ZSG_WZ33"};
+		};
 	};
 };
 
@@ -71,6 +86,25 @@ class cfgMagazines
 		author = "Heavy Ordnance Works + SZG Team";
 		descriptionShort = "Caliber: 9x19 mm <br />Projectile: 9x19 Ball projectile<br />Rounds: 8<br />Type: Box Magazine<br />Used in: FB Vis";
 		displayName = "9x19 8Rnd Mag";
+	};
+
+	class SPE_M39;
+	class ZSG_WZ24: SPE_M39
+	{
+		ammo = "SPE_M39";
+		author = "Heavy Ordnance Works + SZG Team";
+		descriptionShort = "Type: Offensive Grenade<br />Rounds: 1<br />Used in: Hand";
+		displayName = "Concussion Grenade Wz. 24";
+		displayNameShort = "Wz. 24 (HE)";
+	};
+
+	class NORTH_F1Grenade_mag;
+	class ZSG_WZ33: NORTH_F1Grenade_mag
+	{
+		author = "Northern Fronts Mod + SZG Team";
+		descriptionShort = "Type: Defensive Grenade, Fragmentation<br />Rounds: 1<br />Used in: Hand";
+		displayName = "Fragmentation Grenade Wz. 33";
+		displayNameShort = "Wz. 33 (FRAG)";
 	};
 };
 
