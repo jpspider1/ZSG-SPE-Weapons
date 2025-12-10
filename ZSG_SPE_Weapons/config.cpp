@@ -3,7 +3,7 @@ class CfgPatches
 	class ZSG_SPE_Weapons
 	{
 		units[] = {};
-		weapons[] = {"ZSG_RKM_WZ28", "ZSG_FB_WZ35_Vis"};
+		weapons[] = {"ZSG_RKM_WZ28", "ZSG_FB_WZ35_Vis", "ZSG_KBK_WZ29"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"WW2_SPE_Assets_c_Weapons_InfantryWeapons_c"};
 		author = "[23PzD] Jpspider";
@@ -32,6 +32,14 @@ class CfgWeapons
 		displayName = "FB Wz. 35 Vis";
 		magazines[] = {"ZSG_8Rnd_9x19_FB_Vis"};
 		magazineWell[] = {""};
+	};
+
+	class SPE_K98;
+	class ZSG_KBK_WZ29: SPE_K98
+	{
+		author = "Heavy Ordnance Works + SZG Team";
+		descriptionShort = "Bolt-Action Rifle<br />Caliber: 7.92x57 mm Mauser";
+		displayName = "KbK Wz. 29";
 	};
 
 	class GrenadeLauncher;
